@@ -1,11 +1,11 @@
 import numpy as np
 import galsim
 import matplotlib.pyplot as plt
+from astropy.utils.console import ProgressBar
 
 def donut_demo():
     rng = galsim.BaseDeviate(123)
     u = galsim.UniformDeviate(rng)
-
 
     Ellerbroek_alts = [0.0, 2.58, 5.16, 7.73, 12.89, 15.46]  # km
     Ellerbroek_weights = [0.652, 0.172, 0.055, 0.025, 0.074, 0.022]
@@ -25,11 +25,13 @@ def donut_demo():
                             rng=rng, screen_size=102.4, screen_scale=0.1)
 
     ab = [0,0]+[0.2]*12
-    opt = galsim.OpticalScreen(aberrations=ab)
+    opt = galsim.OpticalScreen(diam=8.1, aberrations=ab)
 
     aper = galsim.Aperture(diam=8.1, obscuration=0.2, lam=500.0)
     donut_aper = galsim.Aperture(diam=8.1, obscuration=0.2, lam=500.0,
                                  oversampling=0.5, pad_factor=8.0)
+
+    print("Making pure optics images")
 
     focal_opt_img = galsim.PhaseScreenList(opt).makePSF(
         lam=500.0, aper=aper
@@ -41,17 +43,18 @@ def donut_demo():
 
     gsp = galsim.GSParams(maximum_fft_size=8192)
 
-    intra_opt = galsim.OpticalScreen(aberrations=[a-b for a,b in zip(ab, dabdz)])
+    intra_opt = galsim.OpticalScreen(diam=8.1, aberrations=[a-b for a,b in zip(ab, dabdz)])
     intra_opt_img = galsim.PhaseScreenList(intra_opt).makePSF(
         lam=500.0, aper=donut_aper, gsparams=gsp
     ).drawImage(nx=64, ny=64, scale=0.2).array
 
-    extra_opt = galsim.OpticalScreen(aberrations=[a+b for a,b in zip(ab, dabdz)])
+    extra_opt = galsim.OpticalScreen(diam=8.1, aberrations=[a+b for a,b in zip(ab, dabdz)])
     extra_opt_img = galsim.PhaseScreenList(extra_opt).makePSF(
         lam=500.0, aper=donut_aper, gsparams=gsp
     ).drawImage(nx=64, ny=64, scale=0.2).array
 
     # Next make instantaneous opt+atm psfs
+    print("Making instantaneous optics+atm images")
 
     focal_instant_img = galsim.PhaseScreenList([opt, atm]).makePSF(
         lam=500.0, aper=aper, exptime=0.0
@@ -66,16 +69,20 @@ def donut_demo():
     ).drawImage(nx=64, ny=64, scale=0.2).array
 
     # And finally, the integrated opt+atm psfs
-    exptime = 1.0
-    focal_psf = galsim.PhaseScreenList([opt, atm]).makePSF(
-        lam=500.0, aper=aper, exptime=exptime)
-    intra_psf = galsim.PhaseScreenList([intra_opt, atm]).makePSF(
-        lam=500.0, aper=donut_aper, exptime=exptime, gsparams=gsp)
-    extra_psf = galsim.PhaseScreenList([extra_opt, atm]).makePSF(
-        lam=500.0, aper=donut_aper, exptime=exptime, gsparams=gsp)
-    focal_img = focal_psf.drawImage(nx=128, ny=128, scale=0.01).array
-    intra_img = intra_psf.drawImage(nx=64, ny=64, scale=0.2).array
-    extra_img = extra_psf.drawImage(nx=64, ny=64, scale=0.2).array
+    print("Making integrated optics+atm focal image")
+    exptime = 200.0
+    with ProgressBar(exptime/0.025) as bar:
+        focal_psf = galsim.PhaseScreenList([opt, atm]).makePSF(
+            lam=500.0, aper=aper, exptime=exptime, _bar=bar)
+        focal_img = focal_psf.drawImage(nx=128, ny=128, scale=0.01).array
+    print("Making integrated optics+atm donut images")
+    with ProgressBar(2*exptime/0.025) as bar:
+        intra_psf = galsim.PhaseScreenList([intra_opt, atm]).makePSF(
+            lam=500.0, aper=donut_aper, exptime=exptime, gsparams=gsp, _bar=bar)
+        extra_psf = galsim.PhaseScreenList([extra_opt, atm]).makePSF(
+            lam=500.0, aper=donut_aper, exptime=exptime, gsparams=gsp, _bar=bar)
+        intra_img = intra_psf.drawImage(nx=64, ny=64, scale=0.2).array
+        extra_img = extra_psf.drawImage(nx=64, ny=64, scale=0.2).array
 
     # Make figure
 

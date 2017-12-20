@@ -1,0 +1,108 @@
+# Region file format: DS9 version 4.1
+global color=green dashlist=8 3 width=1 font="helvetica 10 normal roman" select=1 highlite=1 dash=0 fixed=0 edit=1 move=1 delete=1 include=1 source=1
+fk5
+circle(3:00:02.983,+19:41:40.65,29.8") # text={29.8 arcsec}
+circle(3:00:03.026,+19:41:41.73,128.9") # color=blue text={128.9 arcsec}
+circle(3:00:29.799,+19:02:56.92,29.8") # text={29.8 arcsec}
+circle(3:00:29.678,+19:03:11.27,128.9") # color=blue text={128.9 arcsec}
+circle(3:00:30.435,+19:01:59.53,138") # color=red text={138.0 arcsec}
+circle(2:59:41.745,+19:12:24.20,29.8") # text={29.8 arcsec}
+circle(2:59:41.885,+19:12:36.29,128.9") # color=blue text={128.9 arcsec}
+circle(2:59:41.316,+19:11:40.44,138") # color=red text={138.0 arcsec}
+circle(3:00:40.690,+19:17:25.23,29.8") # text={29.8 arcsec}
+circle(3:00:40.535,+19:17:33.97,128.9") # color=blue text={128.9 arcsec}
+circle(3:00:41.564,+19:16:48.25,138") # color=red text={138.0 arcsec}
+circle(3:01:28.436,+19:07:57.73,29.8") # text={29.8 arcsec}
+circle(3:01:27.943,+19:08:12.67,128.9") # color=blue text={128.9 arcsec}
+circle(3:01:30.381,+19:07:06.76,138") # color=red text={138.0 arcsec}
+circle(3:01:39.353,+19:22:29.46,29.8") # text={29.8 arcsec}
+circle(3:01:38.874,+19:22:36.88,128.9") # color=blue text={128.9 arcsec}
+circle(3:01:41.487,+19:21:58.99,138") # color=red text={138.0 arcsec}
+circle(3:01:50.247,+19:37:06.33,29.8") # text={29.8 arcsec}
+circle(3:01:49.807,+19:37:09.26,128.9") # color=blue text={128.9 arcsec}
+circle(3:01:52.597,+19:36:55.40,138") # color=red text={138.0 arcsec}
+circle(3:02:37.914,+19:27:36.74,29.8") # text={29.8 arcsec}
+circle(3:02:36.966,+19:27:43.57,128.9") # color=blue text={128.9 arcsec}
+circle(3:02:41.367,+19:27:11.56,138") # color=red text={138.0 arcsec}
+circle(3:02:48.808,+19:42:11.07,29.8") # text={29.8 arcsec}
+circle(3:02:47.722,+19:42:13.23,128.9") # color=blue text={128.9 arcsec}
+circle(3:02:52.771,+19:42:05.10,138") # color=red text={138.0 arcsec}
+circle(3:02:59.475,+19:56:45.48,29.8") # text={29.8 arcsec}
+circle(3:02:58.412,+19:56:42.71,128.9") # color=blue text={128.9 arcsec}
+circle(3:03:03.520,+19:57:00.49,138") # color=red text={138.0 arcsec}
+circle(3:02:11.871,+20:06:26.19,29.8") # text={29.8 arcsec}
+circle(3:02:11.112,+20:06:19.54,128.9") # color=blue text={128.9 arcsec}
+circle(3:02:14.768,+20:06:52.01,138") # color=red text={138.0 arcsec}
+circle(3:02:01.067,+19:51:47.32,29.8") # text={29.8 arcsec}
+circle(3:02:00.513,+19:51:45.69,128.9") # color=blue text={128.9 arcsec}
+circle(3:02:03.647,+19:51:53.46,138") # color=red text={138.0 arcsec}
+circle(3:01:10.813,+20:01:16.88,29.8") # text={29.8 arcsec}
+circle(3:01:10.456,+20:01:11.56,128.9") # color=blue text={128.9 arcsec}
+circle(3:01:12.426,+20:01:37.63,138") # color=red text={138.0 arcsec}
+circle(3:01:02.142,+19:46:45.36,29.8") # text={29.8 arcsec}
+circle(3:00:51.321,+19:32:02.90,29.8") # text={29.8 arcsec}
+circle(3:00:51.185,+19:32:05.95,128.9") # color=blue text={128.9 arcsec}
+circle(3:00:52.375,+19:31:45.68,138") # color=red text={138.0 arcsec}
+circle(2:59:52.297,+19:26:57.46,29.8") # text={29.8 arcsec}
+circle(2:59:52.404,+19:27:03.94,128.9") # color=blue text={128.9 arcsec}
+circle(2:59:52.089,+19:26:30.78,138") # color=red text={138.0 arcsec}
+circle(2:59:03.898,+19:36:33.34,29.8") # text={29.8 arcsec}
+circle(2:59:04.067,+19:36:35.44,128.9") # color=blue text={128.9 arcsec}
+circle(2:59:02.747,+19:36:20.22,138") # color=red text={138.0 arcsec}
+circle(2:59:12.578,+19:51:08.44,29.8") # text={29.8 arcsec}
+circle(2:59:12.626,+19:51:07.36,128.9") # color=blue text={128.9 arcsec}
+circle(2:59:11.743,+19:51:13.64,138") # color=red text={138.0 arcsec}
+circle(2:59:23.245,+20:05:48.23,29.8") # text={29.8 arcsec}
+circle(2:59:23.429,+20:05:43.89,128.9") # color=blue text={128.9 arcsec}
+circle(2:59:22.534,+20:06:12.21,138") # color=red text={138.0 arcsec}
+circle(2:58:34.683,+20:15:19.20,29.8") # text={29.8 arcsec}
+circle(2:58:35.231,+20:15:09.86,128.9") # color=blue text={128.9 arcsec}
+circle(2:58:32.891,+20:15:56.76,138") # color=red text={138.0 arcsec}
+circle(2:58:24.115,+20:00:40.89,29.8") # text={29.8 arcsec}
+circle(2:58:24.557,+20:00:37.52,128.9") # color=blue text={128.9 arcsec}
+circle(2:58:22.141,+20:00:58.99,138") # color=red text={138.0 arcsec}
+circle(2:58:13.528,+19:46:01.52,29.8") # text={29.8 arcsec}
+circle(2:58:14.044,+19:46:02.17,128.9") # color=blue text={128.9 arcsec}
+circle(2:58:11.279,+19:46:01.85,138") # color=red text={138.0 arcsec}
+circle(2:58:03.286,+19:31:21.95,29.8") # text={29.8 arcsec}
+circle(2:58:03.966,+19:31:27.09,128.9") # color=blue text={128.9 arcsec}
+circle(2:58:00.805,+19:31:02.90,138") # color=red text={138.0 arcsec}
+circle(2:58:53.521,+19:21:53.60,29.8") # text={29.8 arcsec}
+circle(2:58:53.969,+19:22:03.68,128.9") # color=blue text={128.9 arcsec}
+circle(2:58:51.955,+19:21:20.17,138") # color=red text={138.0 arcsec}
+circle(2:58:41.377,+19:07:14.23,29.8") # text={29.8 arcsec}
+circle(2:58:41.836,+19:07:28.73,128.9") # color=blue text={128.9 arcsec}
+circle(2:58:39.689,+19:06:22.03,138") # color=red text={138.0 arcsec}
+circle(2:57:53.119,+19:16:46.60,29.8") # text={29.8 arcsec}
+circle(2:57:53.943,+19:16:57.94,128.9") # color=blue text={128.9 arcsec}
+circle(2:57:50.379,+19:16:07.31,138") # color=red text={138.0 arcsec}
+circle(2:57:15.244,+19:40:54.18,29.8") # text={29.8 arcsec}
+circle(2:57:16.377,+19:40:57.72,128.9") # color=blue text={128.9 arcsec}
+circle(2:57:11.394,+19:40:46.05,138") # color=red text={138.0 arcsec}
+circle(2:57:25.565,+19:55:34.29,29.8") # text={29.8 arcsec}
+circle(2:57:26.349,+19:55:31.64,128.9") # color=blue text={128.9 arcsec}
+circle(2:57:22.318,+19:55:46.05,138") # color=red text={138.0 arcsec}
+circle(2:57:35.892,+20:10:09.51,29.8") # text={29.8 arcsec}
+circle(2:57:36.713,+20:10:01.60,128.9") # color=blue text={128.9 arcsec}
+circle(2:57:32.754,+20:10:40.37,138") # color=red text={138.0 arcsec}
+circle(3:00:11.861,+19:56:17.55,29.8") # text={29.8 arcsec}
+circle(3:00:11.814,+19:56:14.18,128.9") # color=blue text={128.9 arcsec}
+circle(3:00:12.122,+19:56:30.98,138") # color=red text={138.0 arcsec}
+circle(3:00:22.376,+20:10:51.85,29.8") # text={29.8 arcsec}
+circle(3:00:22.300,+20:10:47.61,128.9") # color=blue text={128.9 arcsec}
+circle(3:00:22.884,+20:11:22.49,138") # color=red text={138.0 arcsec}
+circle(3:01:02.041,+19:46:46.05,128.9") # color=blue text={128.9 arcsec}
+circle(3:01:03.358,+19:46:46.69,138") # color=red text={138.0 arcsec}
+circle(3:00:32.733,+20:25:25.44,29.8") # text={29.8 arcsec}
+circle(3:00:32.628,+20:25:13.44,128.9") # color=blue text={128.9 arcsec}
+circle(3:00:33.520,+20:26:17.05,138") # color=red text={138.0 arcsec}
+circle(3:01:23.527,+20:16:01.03,29.8") # text={29.8 arcsec}
+circle(3:01:23.138,+20:15:53.00,128.9") # color=blue text={128.9 arcsec}
+circle(3:01:25.384,+20:16:39.28,138") # color=red text={138.0 arcsec}
+circle(2:59:33.904,+20:20:25.57,29.8") # text={29.8 arcsec}
+circle(2:59:34.055,+20:20:15.61,128.9") # color=blue text={128.9 arcsec}
+circle(2:59:33.348,+20:21:09.19,138") # color=red text={138.0 arcsec}
+circle(2:58:45.525,+20:29:52.15,29.8") # text={29.8 arcsec}
+circle(2:58:45.992,+20:29:35.14,128.9") # color=blue text={128.9 arcsec}
+circle(2:58:43.829,+20:30:50.52,138") # color=red text={138.0 arcsec}
+circle(3:00:03.208,+19:41:38.68,138") # color=red text={138.0 arcsec}
