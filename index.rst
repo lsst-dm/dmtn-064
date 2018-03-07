@@ -44,8 +44,6 @@
 
 .. note::
 
-   **This technote is not yet published.**
-
    We develop a model for the HSC optical PSF through analysis of out-of-focus "donut" images.
 
 .. _intro:
